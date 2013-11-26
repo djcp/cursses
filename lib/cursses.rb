@@ -7,6 +7,10 @@ class Cursses
 
   attr_reader :lines, :cols
 
+  def self.init
+    self.new.init
+  end
+
   def initialize
     initialize_curses_environment
     @lines = C.lines
